@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
-
+require("dotenv").config();
 mongoose.set("strictQuery", false);
 
 // Donde nos vamos a conectar, a que BD. En este caso creará una BD nueva llamada "api-rest-mongodb"
 mongoose.connect(
-  "mongodb+srv://aerozfx:ICrGuXMdSwTWksSd@api-rest-mongo.x91qz0k.mongodb.net/",
+  `mongodb+srv://aerozfx:${process.env.DB_PASSWORD}@api-rest-mongo.x91qz0k.mongodb.net/`,
   {
     // Opciones de la conexión
     useUnifiedTopology: true,
