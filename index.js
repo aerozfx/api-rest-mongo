@@ -6,7 +6,6 @@ const productRouter = require("./routes/productsRouter");
 const providersRouter = require("./routes/providersRouter");
 
 app.use(express.json());
-app.use(morgan(":method :host :status :param[id] - :response-time ms :body"));
 
 app.use("/api/products", productRouter);
 app.use("/api/providers", providersRouter);
