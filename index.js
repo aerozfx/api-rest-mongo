@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const morgan = require("./utils/morgan");
 const port = 3000;
 const productRouter = require("./routes/productsRouter");
 const providersRouter = require("./routes/providersRouter");
