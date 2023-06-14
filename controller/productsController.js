@@ -7,7 +7,7 @@ const getProducts = async (req, res) => {
       let result = await Product.find(
         { id: req.params.id },
         "-_id -__v -provider"
-      );
+      ).populate("provider", "-_id company_name address");
       res.status(200).json(result);
     } catch (err) {
       console.log(err);
