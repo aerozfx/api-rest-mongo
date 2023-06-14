@@ -24,6 +24,6 @@ const providersSchema = {
 // Creamos el esquema
 const providerSchema = mongoose.Schema(providersSchema);
 // Creamos el modelo
-const Provider = mongoose.model("Providers", providerSchema);
+const Provider = mongoose.model("Provider", providerSchema);
 
 module.exports = Provider;
