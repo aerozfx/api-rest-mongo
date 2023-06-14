@@ -15,7 +15,10 @@ const getProducts = async (req, res) => {
     }
   } else {
     try {
-      let result = await Product.find({}, "-_id -__v -provider");
+      let result = await Product.find({}, "-_id -__v -provider").populate(
+        "provider",
+        "company_name address"
+      );
       res.status(200).json(result);
     } catch (err) {
       console.log(err);
